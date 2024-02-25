@@ -22,6 +22,12 @@
     "rules": {
         "no-debugger": "off",
         "no-console": 0,
-        "class-methods-use-this": "off"
+        "class-methods-use-this": "off",
+        "no-explicit-any": [
+            "error",
+            {
+                "fixToUnknown": true
+            }
+        ]
     }
 }
