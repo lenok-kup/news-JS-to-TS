@@ -13,10 +13,13 @@ class App {
     }
 
     start() {
-        document.querySelector<HTMLElement>('.sources')?.addEventListener('click', (e: MouseEvent) => this.controller.getNews(e, (data: {articles: Article[]}) => this.view.drawNews(data)));
-        this.controller.getSources((data: { sources: Source[]; }) => this.view.drawSources(data));
+        document
+            .querySelector<HTMLElement>('.sources')
+            ?.addEventListener('click', (e: MouseEvent) =>
+                this.controller.getNews(e, (data: { articles: Article[] }) => this.view.drawNews(data))
+            );
+        this.controller.getSources((data: { sources: Source[] }) => this.view.drawSources(data));
     }
 }
 
 export default App;
-

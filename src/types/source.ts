@@ -1,4 +1,4 @@
-type Source = {
+interface Source {
     id: string;
     name: string;
     description: string;
@@ -9,4 +9,3 @@ type Source = {
 }
 
 export default Source;
-

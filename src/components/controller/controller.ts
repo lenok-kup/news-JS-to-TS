@@ -3,7 +3,7 @@ import Source from '../../types/source';
 import AppLoader from './appLoader';
 
 class AppController extends AppLoader {
-    getSources(callback: (data: { sources: Source[]; }) => void) {
+    getSources(callback: (data: { sources: Source[] }) => void) {
         super.getResp(
             {
                 endpoint: 'sources',
@@ -38,7 +38,6 @@ class AppController extends AppLoader {
                 }
                 target = (target as HTMLElement).parentNode;
             }
-
         }
     }
 }

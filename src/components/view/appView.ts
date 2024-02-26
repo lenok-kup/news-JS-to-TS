@@ -3,7 +3,6 @@ import Sources from './sources/sources';
 import Source from '../../types/source';
 import Article from '../../types/article';
 
-
 class AppView {
     private news: News;
     private sources: Sources;
@@ -18,12 +17,10 @@ class AppView {
         this.news.draw(values);
     }
 
-    drawSources(data: {sources: Source[]}) {
+    drawSources(data: { sources: Source[] }) {
         const values = data?.sources ? data?.sources : [];
         this.sources.draw(values);
     }
 }
 
 export default AppView;
-
-

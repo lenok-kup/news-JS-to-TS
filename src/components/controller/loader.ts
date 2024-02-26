@@ -1,4 +1,4 @@
-import Options from "../../types/options";
+import Options from '../../types/options';
 
 class Loader {
     baseLink: string;
@@ -9,7 +9,7 @@ class Loader {
     }
 
     getResp<T>(
-        { endpoint, options = {}}: {endpoint: string, options?: Options},
+        { endpoint, options = {} }: { endpoint: string; options?: Options },
         callback: (data: T) => void = () => {
             console.error('No callback for GET response');
         }
@@ -40,9 +40,9 @@ class Loader {
 
     load<T>(method: string, endpoint: string, callback: (data: T) => void, options: Options = {}) {
         fetch(this.makeUrl(options, endpoint), { method })
-            .then(this.errorHandler)
+            .then((res) => this.errorHandler(res))
             .then((res) => res.json())
-            .then((data) => callback(data))
+            .then((data: T) => callback(data))
             .catch((err) => console.error(err));
     }
 }
