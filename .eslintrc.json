@@ -23,11 +23,6 @@
         "no-debugger": "off",
         "no-console": 0,
         "class-methods-use-this": "off",
-        "no-explicit-any": [
-            "error",
-            {
-                "fixToUnknown": true
-            }
-        ]
+        "@typescript-eslint/no-explicit-any": "error"
     }
 }
